@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/busquedaFragment">
+
+    <fragment
+        android:id="@+id/busquedaFragment"
+        android:name="com.portales.laboratorio8plataformas.Busqueda.BusquedaFragment"
+        android:label="fragment_busqueda"
+        tools:layout="@layout/fragment_busqueda" >
+        <action
+            android:id="@+id/action_busquedaFragment_to_resultadosFragment2"
+            app:destination="@id/resultadosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultadosFragment"
+        android:name="com.portales.laboratorio8plataformas.ResultadosFragment"
+        android:label="fragment_resultados"
+        tools:layout="@layout/fragment_resultados" >
+        <action
+            android:id="@+id/action_resultadosFragment_to_busquedaFragment2"
+            app:destination="@id/busquedaFragment" />
+    </fragment>
+</navigation>
