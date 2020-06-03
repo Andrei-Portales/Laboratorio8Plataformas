@@ -30,11 +30,11 @@ class BusquedaRepository {
 
         results.enqueue(object : Callback<List<Result>>{
             override fun onFailure(call: Call<List<Result>>, t: Throwable) {
-                TODO("Not yet implemented")
+
             }
 
             override fun onResponse(call: Call<List<Result>>, response: Response<List<Result>>) {
-                TODO("Not yet implemented")
+
             }
 
         })
