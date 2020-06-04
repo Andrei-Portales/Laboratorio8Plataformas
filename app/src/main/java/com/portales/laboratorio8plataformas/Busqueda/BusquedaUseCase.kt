@@ -10,6 +10,5 @@ class BusquedaUseCase (){
 
     fun getDataList(): List<Result>{
         return resultrepository.createResultList()
-        
     }
 }

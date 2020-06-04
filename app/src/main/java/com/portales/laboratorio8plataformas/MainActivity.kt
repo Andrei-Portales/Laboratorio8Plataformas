@@ -18,6 +18,7 @@ import com.portales.laboratorio8plataformas.Models.Result
 class MainActivity : AppCompatActivity() {
 
     private lateinit var viewModel : BusquedaViewModel
+    private lateinit var lista : List<Result>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,12 +27,16 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(BusquedaViewModel::class.java)
 
         val resultadosObserver = Observer<List<Result>>{
-
+            lista = it
         }
 
         viewModel.getListaResultsLiveData().observe(this, resultadosObserver)
         viewModel.getData()
-        consultaProvisional()
+
+    }
+
+    fun getLista(): List<Result>{
+        return lista
     }
 
 

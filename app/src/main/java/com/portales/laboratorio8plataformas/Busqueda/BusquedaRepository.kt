@@ -22,8 +22,8 @@ class BusquedaRepository() {
 
     fun createResultList() : List<Result>{
         return listOf<Result>(
-            Result("Andrei","10-20-51",1000),
-            Result("Prueba", "20-15-98", 5000)
+            Result("Andrei","10-20-51",1000, "","www.facebook.com"),
+            Result("Prueba", "20-15-98", 5000, "","www.gmail.com")
         )
     }
 
