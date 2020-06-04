@@ -1,9 +1,10 @@
 package com.portales.laboratorio8plataformas.Busqueda
 
+import android.content.Context
 import com.portales.laboratorio8plataformas.Models.Result
 import org.json.JSONObject
 
-class BusquedaUseCase {
+class BusquedaUseCase (){
 
     val resultrepository = BusquedaRepository()
 

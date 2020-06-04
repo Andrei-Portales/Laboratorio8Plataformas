@@ -1,12 +1,13 @@
 package com.portales.laboratorio8plataformas.Busqueda
 
+import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.portales.laboratorio8plataformas.Models.Result
 import com.portales.laboratorio8plataformas.Models.SearchData
 
-class BusquedaViewModel : ViewModel() {
+class BusquedaViewModel() : ViewModel() {
 
     val busquedaUseCase = BusquedaUseCase()
 
@@ -21,7 +22,7 @@ class BusquedaViewModel : ViewModel() {
         setdatos(busquedaUseCase.getDataList())
     }
 
-    fun getListaFrutasLiveData(): LiveData<List<Result>>{
+    fun getListaResultsLiveData(): LiveData<List<Result>>{
         return data
     }
 

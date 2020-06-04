@@ -1,10 +1,11 @@
-package com.portales.laboratorio8plataformas
+package com.portales.laboratorio8plataformas.Resultados
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.portales.laboratorio8plataformas.R
 
 /**
  * A simple [Fragment] subclass.

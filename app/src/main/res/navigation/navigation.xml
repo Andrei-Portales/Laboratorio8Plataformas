@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/resultadosFragment"
-        android:name="com.portales.laboratorio8plataformas.ResultadosFragment"
+        android:name="com.portales.laboratorio8plataformas.Resultados.ResultadosFragment"
         android:label="fragment_resultados"
         tools:layout="@layout/fragment_resultados" >
         <action
