@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.getListaResultsLiveData().observe(this, resultadosObserver)
         viewModel.getData()
-
     }
 
     fun getLista(): List<Result>{

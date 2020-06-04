@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.portales.laboratorio8plataformas.Models.Result
 import com.portales.laboratorio8plataformas.R
 import kotlinx.android.synthetic.main.resultado_model.view.*
+import java.lang.Exception
 
 class RecyclerAdapter (var context:Context, var lista: List<Result>) :RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
@@ -36,9 +37,14 @@ class RecyclerAdapter (var context:Context, var lista: List<Result>) :RecyclerVi
         holder.view.txtAuthor.setText(element.author)
         holder.view.txtPoints.setText(element.points.toString())
         holder.view.setOnClickListener {
-            val uri = Uri.parse(element.url)
-            val intent = Intent(Intent.ACTION_VIEW, uri)
-            (context as Activity).startActivity(intent)
+            try {
+                val uri = Uri.parse(element.url)
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.data = uri
+                (context as Activity).startActivity(intent)
+            }catch (e:Exception){
+                Toast.makeText(context, "No se pudo abrir url", Toast.LENGTH_LONG).show()
+            }
         }
     }
 
