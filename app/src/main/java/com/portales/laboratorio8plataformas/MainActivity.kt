@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.getListaResultsLiveData().observe(this, resultadosObserver)
         viewModel.getData()
+
     }
 
     fun getLista(): List<Result>{
@@ -45,10 +46,10 @@ class MainActivity : AppCompatActivity() {
         val jsonObjectRequest = JsonObjectRequest(
             Request.Method.GET, url, null,
             Response.Listener { response ->
-                Log.d("RESPONSE", response.toString())
+                Log.d("RESPONSE", response.get("hits").toString())
             },
             Response.ErrorListener { error ->
-
+                Log.d("ERROR", error.message)
             }
         )
         jsonObjectRequest.setRetryPolicy(DefaultRetryPolicy(60000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT))
